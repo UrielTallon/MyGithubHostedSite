@@ -1,0 +1,48 @@
+{
+  "name": "portfolio_website",
+  "version": "1.0.0",
+  "description": "Welbsite meant to be hosted on Github in order to display my projects port-folio",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run watch:all",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lite": "lite-server",
+    "scss": "node-sass -o css/ css/",
+    "watch:scss": "onchange \"css/*.scss\" -- npm run scss",
+    "watch:all": "parallelshell \"npm run watch:scss\" \"npm run lite\"",
+    "clean": "rimraf dist",
+    "copyfonts": "copyfiles -f node_modules/font-awesome/fonts/* dist/fonts",
+    "cprojects": "copyfiles -f projects/* dist/projects",
+    "imagemin": "imagemin img/* -o dist/img",
+    "usemin": "usemin index.html -d dist --htmlmin -o dist/index.html && usemin education.html -d dist --htmlmin -o dist/education.html && usemin experience.html -d dist --htmlmin -o dist/experience.html && usemin introduction.html -d dist --htmlmin -o dist/introduction.html",
+    "build": "npm run clean && npm run copyfonts && npm run cprojects && npm run imagemin && npm run usemin"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/UrielTallon/MyGithubHostedSite.git"
+  },
+  "author": "Uriel Tallon",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/UrielTallon/MyGithubHostedSite/issues"
+  },
+  "homepage": "https://github.com/UrielTallon/MyGithubHostedSite#readme",
+  "dependencies": {
+    "bootstrap": "4.1.1",
+    "font-awesome": "4.7.0",
+    "jquery": "3.3.1",
+    "showdown": "1.8.6"
+  },
+  "devDependencies": {
+    "copyfiles": "2.0.0",
+    "htmlmin": "0.0.7",
+    "imagemin-cli": "3.0.0",
+    "lite-server": "2.3.0",
+    "node-sass": "4.9.0",
+    "onchange": "4.0.0",
+    "parallelshell": "3.0.2",
+    "rimraf": "2.6.2",
+    "uglify-js": "3.4.5",
+    "usemin-cli": "0.5.1"
+  }
+}

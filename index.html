@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="eng">
+    
+    <head>
+        <!-- Required meta tags always come first -->
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta http-equiv="x-ua-compatible" content="ie=edge" />
+        
+        <!-- build:css css/main.css -->
+        <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" />
+        <link rel="stylesheet" href="css/mystyles.css" />
+        <!-- endbuild -->
+        
+        <title>UT Website</title>
+    </head>
+    
+    <body>
+    
+        <div class="d-flex">
+            
+            <nav id="sidebar">
+                
+                <div class="sidebar-header">
+                    <h3>Uriel Tallon</h3>
+                </div>
+                
+                <div class="list-group list-group-flush">
+                    <a href="#" class="list-group-item list-group-item-action" id="item-intro">
+                        <i class="fa fa-fw fa-address-card"></i> Introduction
+                    </a>
+                    <a href="#" class="list-group-item list-group-item-action" id="item-edu">
+                        <i class="fa fa-fw fa-graduation-cap"></i> Education
+                    </a>
+                    <a href="#" class="list-group-item list-group-item-action" id="item-exp">
+                        <i class="fa fa-fw fa-briefcase"></i> Experience
+                    </a>
+                    <a href="#project-list" class="list-group-item list-group-item-action" data-toggle="collapse">
+                        <i class="fa fa-fw fa-folder-open"></i> Projects <span class="badge badge-light">3</span>
+                    </a>
+                    
+                    <div class="list-group collapse" id="project-list">
+                        <a href="#" class="list-group-item list-group-item-action" id="project-laneTracking">
+                            Lane Line Tracking
+                        </a>
+                        <a href="#" class="list-group-item list-group-item-action">
+                            Vehicle Tracking
+                        </a>
+                        <a href="#" class="list-group-item list-group-item-action">
+                            Behavioural Cloning
+                        </a>
+                    </div>
+                    
+                    <a href="#" class="list-group-item list-group-item-action">
+                        <i class="fa fa-fw fa-envelope"></i> Contact
+                    </a>
+                </div>
+                
+            </nav>
+            
+            <div class="container-fluid main">
+                
+                <div class="container" id="content-header">
+                    <div class="row">
+                        <div class="col text-center">
+                            <h3>POWERED BY</h3>
+                            <span>
+                                <img src="img/logo_bootstrap.png" alt="Bootstrap CSS" class="logo"/>
+                                &
+                                <img src="img/logo_jquery.png" alt="JQuery" class= "logo" />
+                            </span>
+                        </div>
+                        <div class="col text-center">
+                            <h3>AROUND THE WEB</h3>
+                            <ul>
+                                <li>
+                                    <a href="https://www.linkedin.com/in/uriel-tallon-95361878" target="_blank" class="social-icon">
+                                        <i class="fa fa-fw fa-linkedin"></i>
+                                    </a>
+                                </li>
+                                <li>    
+                                    <a href="https://github.com/UrielTallon" target="_blank" class="social-icon">
+                                        <i class="fa fa-fw fa-github"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="container" id="content" style="display: none">
+                </div>
+            
+            </div>
+        
+        </div>
+        
+        <!-- build:js js/main.js -->
+        <script src="node_modules/jquery/dist/jquery.min.js"></script>
+        <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="node_modules/showdown/dist/showdown.min.js"></script>
+        <script src="js/script.js"></script>
+        <!-- endbuild -->
+    
+    </body>
+    
+</html>

@@ -1,0 +1,107 @@
+$background-dark: #397EC3;
+$background-clear: #70A8DD;
+
+@mixin transition($tr-time) {
+    transition: all $tr-time ease-in-out;
+    -webkit-transition: all $tr-time ease-in-out;
+    -moz-transition: all $tr-time ease-in-out;
+    -o-transition: all $tr-time ease-in-out;
+} 
+
+@mixin bold-fonts($size) {
+    font-weight: bold;
+    font-size: $size;
+}
+
+body {
+    font-family: Verdana, Helvetica, sans-serif;
+    background: white;
+    overflow: scroll;
+}
+
+#sidebar {
+    min-width: 20%;
+    max-width: 20%;
+    height: 100vh;
+    position: fixed;
+    background-color: $background-dark;
+    .list-group-item { 
+        background-color: $background-clear;
+        color: white;
+    }
+}
+
+.sidebar-header {
+    text-align: center;
+    padding: 3%;
+    color: white;
+    h3 {
+        @include bold-fonts(2em);
+    }
+}
+
+.main {
+    margin-left: 20%;
+}
+
+#content-header {
+    width: 90%;
+    border-style: hidden;
+    border-radius: 2vw;
+    background-color: #CCCCCC;
+    box-shadow: 1px 1px 3px;
+    margin-top: 2%;
+    padding: 0.5%;
+    h3, span {
+        @include bold-fonts(1.7em);
+    }
+    li {
+        display: inline;
+    }
+}
+
+.logo {
+    border-radius: 1.5vh;
+}
+
+.social-icon {
+    color: black;
+    font-size: 1.3em;
+    border-style: solid;
+    border-radius: 50%;
+    display: inline-block;
+    padding: 5px;
+    margin: 1%;
+    @include transition(.5s);
+}
+
+.social-icon:hover {
+    background-color: white;
+    color: #345392;
+}
+
+.intro-text {
+    text-align: left;
+    font-size: 1.5em;
+    margin-top: 5%;
+}
+
+.row-content {
+    margin-top: 25px;
+    border-bottom: 1px ridge;
+    .media>a {
+        padding-top: 40px;
+    }
+}
+
+.separator {
+    margin-top: 3%;
+    margin-bottom: 3%;
+    margin-right: 5%;
+    margin-left: 5%;
+    padding-top: 2%;
+    text-align: center;
+    @include bold-fonts(1.7em);
+    border-top: 0.5px solid #CCCCCC;
+    border-bottom: 0.5px solid #CCCCCC;
+}
